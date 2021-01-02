@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/projet-peage/peage-context.bcc" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.seesContext#*"/>
+    <org.eventb.core.scInternalContext name="peage-context">
+        <org.eventb.core.scCarrierSet name="USAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USAGERS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="peage-contexu" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.invariant#\/" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="usagers" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.variable#." org.eventb.core.type="ℙ(USAGERS)"/>
+    <org.eventb.core.scEvent name="peage-contexv" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#'">
+        <org.eventb.core.scAction name="'" org.eventb.core.assignment="usagers ≔ ∅ ⦂ ℙ(USAGERS)" org.eventb.core.label="act1" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#'|org.eventb.core.action#'"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="peage-contexw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_troncon" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#,">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#,|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="usager" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#,|org.eventb.core.parameter#'" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.scAction name="usages" org.eventb.core.assignment="usagers ≔ usagers∪{usager}" org.eventb.core.label="act1" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#,|org.eventb.core.action#)"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="peage-contexx" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir_troncon" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#-">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#-|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="usager" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#-|org.eventb.core.parameter#)" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.scAction name="usages" org.eventb.core.assignment="usagers ≔ usagers ∖ {usager}" org.eventb.core.label="act1" org.eventb.core.source="/projet-peage/peage-machine.bum|org.eventb.core.machineFile#peage-machine|org.eventb.core.event#-|org.eventb.core.action#("/>
+    </org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
