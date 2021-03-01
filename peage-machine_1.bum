@@ -13,9 +13,12 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_troncon"/>
 <org.eventb.core.guard name="(" org.eventb.core.comment="Si la barrière est fermée" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = FALSE"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ TRUE" org.eventb.core.comment="Alors la barrière s'ouvre" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∉ usagers"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="-" org.eventb.core.comment="Après que l'usagers soit entré sur le tronçon, il faut refermer la barrière" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_entré">
-<org.eventb.core.guard name="'" org.eventb.core.comment="Si la barrière d'entrée est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = TRUE" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="'" org.eventb.core.comment="Si la barrière d'entrée est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = TRUE"/>
 <org.eventb.core.guard name="(" org.eventb.core.comment="l'usager est sur le tronçon" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
@@ -26,6 +29,9 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortir_troncon"/>
 <org.eventb.core.guard name="(" org.eventb.core.comment="La barrière (bar2) est fermée" org.eventb.core.label="grd1" org.eventb.core.predicate="bar2 = FALSE"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="bar2 ≔ TRUE" org.eventb.core.comment="La barrière (bar2) s'ouvre" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="usagers ≔ usagers ∖ {usager}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_sortie">
 <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barière de sortie est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar2 = TRUE"/>

@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.psFile>
-<org.eventb.core.psStatus name="entrer_t_1/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="entrer_t_1/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="fermeture_entré/grd1/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="6" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sortir_t_1/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sortir_t_1/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
-</org.eventb.core.psFile>
+<org.eventb.core.psFile/>
