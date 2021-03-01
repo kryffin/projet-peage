@@ -1,70 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
-        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.poIdentifier name="bar1" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.poIdentifier name="bar2" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.poPredicate name="usagert" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.invariant#\/"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="entrer_t_1/grd1/GRD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contexx">
-            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
-        </org.eventb.core.poPredicateSet>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.guard#("/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#entrer_t_1\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
-        <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexx" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=FALSE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,|org.eventb.core.guard#("/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="fermeture_entré/grd1/THM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexy"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexy"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexy" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
-        <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexy" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexy" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="sortir_t_1/grd1/GRD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contexz">
-            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
-        </org.eventb.core.poPredicateSet>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-"/>
-        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
-        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#sortir_t_1\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
-        <org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexz" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar2=FALSE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0|org.eventb.core.guard#("/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="4">
-        <org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{" org.eventb.core.poStamp="4">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar2=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#1|org.eventb.core.guard#'"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1∈BOOL" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.invariant#+"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bar2∈BOOL" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.invariant#."/>
-    </org.eventb.core.poPredicateSet>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.poIdentifier name="bar1" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="bar2" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="usagert" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexy" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexy" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexy" org.eventb.core.poStamp="5"/>
+<org.eventb.core.poSequent name="entrer_t_1/grd1/GRD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contexz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#entrer_t_1\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="entrer_t_1/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contexz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usagers=usagers∪{usager}" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#,|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#entrer_t_1\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexz" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=FALSE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#,|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="fermeture_entré/grd1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#-|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="sortir_t_1/grd1/GRD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contex\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#sortir_t_1\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortir_t_1/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTALLHYPpeage-contex\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usagers=usagers ∖ {usager}" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine_0.bum|org.eventb.core.machineFile#peage-machine_0|org.eventb.core.event#-|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poSequent#sortir_t_1\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex|" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex|" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar2=FALSE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#0|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex}" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex}" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex}" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar2=TRUE" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/peage-machine_1.bpo|org.eventb.core.poFile#peage-machine_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1∈BOOL" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bar2∈BOOL" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine_1.bum|org.eventb.core.machineFile#peage-machine_1|org.eventb.core.invariant#3"/>
+</org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
