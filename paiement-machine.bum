@@ -12,7 +12,6 @@
     <org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="paiement_incorrect">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="payement"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="somme = FALSE"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="payé ≔ FALSE" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="," org.eventb.core.comment="La somme due par l'automobiliste au télépéage" org.eventb.core.identifier="somme"/>
     <org.eventb.core.invariant name="-" org.eventb.core.comment="TRUE si la somme est juste et FALSE sinon" org.eventb.core.label="inv1" org.eventb.core.predicate="somme ∈ BOOL"/>

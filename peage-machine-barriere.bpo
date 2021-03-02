@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="6">
+<org.eventb.core.poFile org.eventb.core.poStamp="12">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
     </org.eventb.core.poPredicateSet>
@@ -20,17 +20,17 @@
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexz" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexz" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexz" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=FALSE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
         <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contex{" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#EVTIDENTpeage-contex{" org.eventb.core.poStamp="12">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contex|" org.eventb.core.parentSet="/projet-peage/peage-machine-barriere.bpo|org.eventb.core.poFile#peage-machine-barriere|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>

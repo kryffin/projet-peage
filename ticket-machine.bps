@@ -2,10 +2,11 @@
 <org.eventb.core.psFile>
     <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="INITIALISATION/act3/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="fermeture_entré/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="sortir_tronçon/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="sortir_tronçon/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="sortir_tronçon/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>

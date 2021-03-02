@@ -15,13 +15,13 @@
         <org.eventb.core.guard name="(" org.eventb.core.comment="Si la barrière est fermée" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = FALSE"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ TRUE" org.eventb.core.comment="Alors la barrière s'ouvre" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="+" org.eventb.core.comment="l'usager ne fait pas encore partie de l'ensemble" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∉ usagers"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.comment="On ajoute l'usager à l'ensemble" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="-" org.eventb.core.comment="Après que l'usagers soit entré sur le tronçon, il faut refermer la barrière" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_entré">
         <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barrière d'entrée est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = TRUE"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="l'usager est sur le tronçon" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="bar2 ∈ BOOL"/>
     <org.eventb.core.variable name="/" org.eventb.core.comment="barrière du péage de sortie" org.eventb.core.identifier="bar2"/>
