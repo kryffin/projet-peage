@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/projet-peage/peage-context.bcc|org.eventb.core.scContextFile#peage-context" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="peage-context">
+<org.eventb.core.scCarrierSet name="USAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="peage-contexu" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(USAGERS_BADGE,{bob,evelyn})" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="evelyn" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.constant#+" org.eventb.core.type="USAGERS_BADGE"/>
+<org.eventb.core.scConstant name="bob" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.constant#," org.eventb.core.type="USAGERS_BADGE"/>
+<org.eventb.core.scCarrierSet name="USAGERS_BADGE" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.carrierSet#-" org.eventb.core.type="ℙ(USAGERS_BADGE)"/>
+</org.eventb.core.scContextFile>
