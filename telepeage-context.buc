@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-<org.eventb.core.extendsContext name="'" org.eventb.core.target="peage-context"/>
-<org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(USAGERS_BADGE, {bob, evelyn})"/>
-<org.eventb.core.constant name="+" org.eventb.core.identifier="evelyn"/>
-<org.eventb.core.constant name="," org.eventb.core.identifier="bob"/>
-<org.eventb.core.carrierSet name="-" org.eventb.core.comment="Usagers avec un badge de télépéage" org.eventb.core.identifier="USAGERS_BADGE"/>
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="peage-context"/>
+    <org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="BADGE_USAGERS ⊆ USAGERS"/>
+    <org.eventb.core.constant name="+" org.eventb.core.identifier="BADGE_USAGERS"/>
 </org.eventb.core.contextFile>

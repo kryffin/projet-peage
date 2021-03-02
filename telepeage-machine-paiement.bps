@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="entrer_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sortie_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="incremente_date/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="incremente_date/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv1/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortie_tele/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortie_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="incremente_date/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="incremente_date/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

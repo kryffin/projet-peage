@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="8">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="8">
-<org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="USAGERS_BADGE" org.eventb.core.type="ℙ(USAGERS_BADGE)"/>
-<org.eventb.core.poIdentifier name="evelyn" org.eventb.core.type="USAGERS_BADGE"/>
-<org.eventb.core.poIdentifier name="bob" org.eventb.core.type="USAGERS_BADGE"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/telepeage-context.bpo|org.eventb.core.poFile#telepeage-context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(USAGERS_BADGE,{bob,evelyn})" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#*"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="9">
+        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/telepeage-context.bpo|org.eventb.core.poFile#telepeage-context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#*"/>
+    </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

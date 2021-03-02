@@ -1,127 +1,142 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="43">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="27">
-<org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="USAGERS_BADGE" org.eventb.core.type="ℙ(USAGERS_BADGE)"/>
-<org.eventb.core.poIdentifier name="evelyn" org.eventb.core.type="USAGERS_BADGE"/>
-<org.eventb.core.poIdentifier name="bob" org.eventb.core.type="USAGERS_BADGE"/>
-<org.eventb.core.poPredicate name="USAGERS_BADGF" org.eventb.core.predicate="partition(USAGERS_BADGE,{bob,evelyn})" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#*"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poIdentifier name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usager_courant" org.eventb.core.type="USAGERS_BADGE"/>
-<org.eventb.core.poIdentifier name="usagers_badge" org.eventb.core.type="ℙ(USAGERS_BADGE)"/>
-<org.eventb.core.poIdentifier name="dispositif" org.eventb.core.type="BOOL"/>
-<org.eventb.core.poIdentifier name="histo_passage" org.eventb.core.type="USAGERS_BADGE×ℤ"/>
-<org.eventb.core.poIdentifier name="date" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poPredicate name="usager_couranu" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.invariant#\/"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager_courant'∈(∅ ⦂ ℙ(USAGERS_BADGE))" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="date'∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="histo_passage'=usager_courant' ↦ date'" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex{" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
-<org.eventb.core.poIdentifier name="histo_passage'" org.eventb.core.type="USAGERS_BADGE×ℤ"/>
-<org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="a_signaler'" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usagers_badge'" org.eventb.core.type="ℙ(USAGERS_BADGE)"/>
-<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usager_courant'" org.eventb.core.type="USAGERS_BADGE"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex{" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex{" org.eventb.core.poStamp="41"/>
-<org.eventb.core.poSequent name="entrer_tele/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="43">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex\|"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#entrer_tele\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex|" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
-<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex|" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex\|" org.eventb.core.poStamp="43">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="dispositif=FALSE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)|org.eventb.core.guard#+"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="sortie_tele/grd1/GRD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex}">
-<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#sortie_tele\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex}" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
-<org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex}" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex}" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5|org.eventb.core.guard#'"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex~" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS_BADGE"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex~" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex~" org.eventb.core.poStamp="42">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers_badge" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="incremente_date/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contey'"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="date+1∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#4"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#incremente_date\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incremente_date/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contey'"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="histo_passage=usager_courant ↦ date+1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#4"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#incremente_date\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contey'" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contey'" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contey'" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="41">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usagers_badge⊆USAGERS_BADGE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#*"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager_courant∈usagers_badge" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a_signaler⊆USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#:"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dispositif∈BOOL" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#."/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="date∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
-<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="histo_passage=usager_courant ↦ date" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poFile org.eventb.core.poStamp="47">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="46">
+        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poPredicate name="BADGE_USAGERT" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="47">
+        <org.eventb.core.poIdentifier name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager_courant" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.poIdentifier name="usagers_badge" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="dispositif" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="histo_passage" org.eventb.core.type="USAGERS×ℤ"/>
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="usager_couranu" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.invariant#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="inv1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ABSHYP"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usagers_badge⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ABSHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager_courant'∈(∅ ⦂ ℙ(USAGERS))" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="date'∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="histo_passage'=usager_courant' ↦ date'" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex{" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="47">
+        <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="histo_passage'" org.eventb.core.type="USAGERS×ℤ"/>
+        <org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="a_signaler'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usagers_badge'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager_courant'" org.eventb.core.type="USAGERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex{" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex{" org.eventb.core.poStamp="47"/>
+    <org.eventb.core.poSequent name="entrer_tele/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex\|"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#entrer_tele\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex|" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="47">
+        <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex|" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex\|" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="dispositif=FALSE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="sortie_tele/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager ↦ date=usager_courant ↦ date" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#sortie_tele\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="sortie_tele/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contex}"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#sortie_tele\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex}" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="histo_passage'" org.eventb.core.type="USAGERS×ℤ"/>
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex}" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex}" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈usagers_badge" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5|org.eventb.core.guard#grd1"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contex~" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="a_signaler'" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contex~" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contex~" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers_badge" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="incremente_date/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contey'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="date+1∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#4"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#incremente_date\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="incremente_date/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTALLHYPtelepeage-contey'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="histo_passage=usager_courant ↦ date+1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#4"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poSequent#incremente_date\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTtelepeage-contey'" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtelepeage-contey'" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#EVTIDENTtelepeage-contey'" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/telepeage-machine-paiement.bpo|org.eventb.core.poFile#telepeage-machine-paiement|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="47">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usagers_badge⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager_courant∈usagers_badge" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="a_signaler⊆USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dispositif∈BOOL" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#."/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="date∈ℕ1" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#2"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="histo_passage=usager_courant ↦ date" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.invariant#8"/>
+    </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
