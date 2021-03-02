@@ -69,6 +69,7 @@
         <org.eventb.core.action name="*" org.eventb.core.assignment="ticket_usagers ≔ ticket_usagers ∖ {usager}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="ticket_inséré ≔ FALSE" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="payé ≔ FALSE" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="payé = TRUE"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_sortie">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="fermeture_sortie"/>
