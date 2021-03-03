@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="paiement_correct/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_correct/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_incorrect/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_incorrect/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="bon_payeur/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="mauvais_payeur/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_correct/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_correct/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_incorrect/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_incorrect/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="bon_payeur/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="mauvais_payeur/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

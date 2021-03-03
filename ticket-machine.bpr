@@ -28,6 +28,8 @@
                         <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
                         <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
                         <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p11"/>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
@@ -42,6 +44,14 @@
             <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -52,20 +62,20 @@
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
@@ -136,6 +146,7 @@
                         <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
                         <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
                         <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p10"/>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
@@ -160,20 +171,24 @@
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="sorties⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="sorties" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
@@ -256,6 +271,8 @@
                                         <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
                                         <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p13"/>
                                         <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p14"/>
+                                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p15"/>
+                                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p16"/>
                                     </org.eventb.core.prAnte>
                                 </org.eventb.core.prRule>
                             </org.eventb.core.prAnte>
@@ -269,6 +286,9 @@
         <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="usager∈TICKET_USAGERS"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤∧usager∈TICKET_USAGERS"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
@@ -276,7 +296,7 @@
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="ticket_usagers∪{usager}⊆TICKET_USAGERS"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS"/>
@@ -287,16 +307,19 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈usagers">
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="bar1∈BOOL">
             <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="ticket_usagers⊆TICKET_USAGERS∧usager∈TICKET_USAGERS"/>
@@ -319,6 +342,8 @@
                         <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
                         <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
                         <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p11"/>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
@@ -333,6 +358,14 @@
             <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -343,20 +376,20 @@
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
@@ -374,8 +407,18 @@
                 <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
                 <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
                 <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -386,20 +429,20 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -416,8 +459,18 @@
                 <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
                 <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
                 <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -428,20 +481,20 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -458,8 +511,18 @@
                 <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
                 <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
                 <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -470,20 +533,20 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -500,8 +563,18 @@
                 <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
                 <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
                 <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
@@ -512,20 +585,20 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
             <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="ticket_inséré∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
             <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
             <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
             <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
@@ -578,64 +651,57 @@
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="fermeture_entré/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
+    <org.eventb.core.prProof name="fermeture_entré/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
-                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
-                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
-                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
-                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
-                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
-                                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
-                                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
-                                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
-                                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
-                                    </org.eventb.core.prAnte>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
+                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
+                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊥"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="usagers⊆USAGERS"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ticket_inséré∈BOOL">
-            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉usagers"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∈usagers"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬usager∈usagers"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bar1∈BOOL">
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bar1∈BOOL">
             <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="bouton_presse∈BOOL">
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
             <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="payé∈BOOL">
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
             <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ticket_pris∈BOOL">
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬⊤"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="fermeture_entré/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="USAGERS">
         <org.eventb.core.lang name="L"/>
@@ -681,6 +747,304 @@
             <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="ticket_usagers⊆TICKET_USAGERS"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="sortir_tronçon/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
+                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
+                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p9"/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bouton_presse∈BOOL">
+            <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="payé∈BOOL">
+            <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="ticket_pris∈BOOL">
+            <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="entrer_tronçon/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p13"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="péage1⊆USAGERS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="usagers⊆USAGERS">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉péage1"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∉usagers">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬usager∈usagers">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="bouton_presse∈BOOL">
+            <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="payé∈BOOL">
+            <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ticket_pris∈BOOL">
+            <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈péage1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="entrer_tronçon/grd4/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p11"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p12"/>
+                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p13"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="usagers⊆USAGERS">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉péage2"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈péage2"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∉usagers">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬usager∈usagers">
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="péage2⊆USAGERS"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="bouton_presse∈BOOL">
+            <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="payé∈BOOL">
+            <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ticket_pris∈BOOL">
+            <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="fermeture_sortie/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p11"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉usagers">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈usagers">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="péage2⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="péage1⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="bouton_presse∈BOOL">
+            <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="payé∈BOOL">
+            <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="ticket_pris∈BOOL">
+            <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="fermeture_entré/act3/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="USAGERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p8"/>
+                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p9"/>
+                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p10"/>
+                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p11"/>
+                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p12"/>
+                <org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p13"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p3,p1">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="ticket_usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+        <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="péage1⊆USAGERS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="usagers⊆USAGERS"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="bar2∈BOOL">
+            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="péage1∩péage2=(∅ ⦂ ℙ(USAGERS))"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="ticket_inséré∈BOOL">
+            <org.eventb.core.prIdent name="ticket_inséré" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="ticket_usagers⊆TICKET_USAGERS"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∈usagers"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="péage2⊆USAGERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usagers=usagers∪{usager}"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="bouton_presse∈BOOL">
+            <org.eventb.core.prIdent name="bouton_presse" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="payé∈BOOL">
+            <org.eventb.core.prIdent name="payé" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="ticket_pris∈BOOL">
+            <org.eventb.core.prIdent name="ticket_pris" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
