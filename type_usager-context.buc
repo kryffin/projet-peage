@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="peage-context"/>
+<org.eventb.core.axiom name="*" org.eventb.core.comment="Les usagers qui utilisent un badge sont des usagers du tronçon" org.eventb.core.label="axm1" org.eventb.core.predicate="BADGE_USAGERS ⊆ USAGERS"/>
+<org.eventb.core.constant name="+" org.eventb.core.comment="Tous les usagers du tronçon avec un badge de télépéage" org.eventb.core.identifier="BADGE_USAGERS"/>
+<org.eventb.core.constant name="," org.eventb.core.comment="Tous les usagers du tronçon qui utilisent un ticket" org.eventb.core.identifier="TICKET_USAGERS"/>
+<org.eventb.core.axiom name="-" org.eventb.core.comment="Les usagers qui utilisent un ticket sont des usagers du tronçon" org.eventb.core.label="axm2" org.eventb.core.predicate="TICKET_USAGERS ⊆ USAGERS"/>
+<org.eventb.core.axiom name="." org.eventb.core.comment="Un usager d'un ensemble ne peut pas faire partie de l'autre" org.eventb.core.label="axm3" org.eventb.core.predicate="BADGE_USAGERS ∩ TICKET_USAGERS = ∅"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="BADGE_USAGERS ∪ TICKET_USAGERS = USAGERS"/>
+</org.eventb.core.contextFile>
