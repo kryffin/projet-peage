@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="la barrière d'entrée est fermée" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="bar2 ≔ FALSE" org.eventb.core.comment="la barrière de sortie est fermée" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="usagers ≔ ∅" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="péage1 ≔ ∅" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="péage2 ≔ ∅" org.eventb.core.label="act6"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="la barrière d'entrée est fermée" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="bar2 ≔ FALSE" org.eventb.core.comment="la barrière de sortie est fermée" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="péage1 ≔ ∅" org.eventb.core.label="act15"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="péage2 ≔ ∅" org.eventb.core.label="act16"/>
     </org.eventb.core.event>
     <org.eventb.core.refinesMachine name="(" org.eventb.core.target="peage-machine-usager"/>
     <org.eventb.core.seesContext name=")" org.eventb.core.target="peage-context"/>
@@ -14,45 +13,56 @@
     <org.eventb.core.event name="," org.eventb.core.comment="À l'arrivé d'un usager au péage d'entré, la barrière s'ouvre" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_tronçon">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_tronçon"/>
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="Si la barrière est fermée" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = FALSE"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ TRUE" org.eventb.core.comment="Alors la barrière s'ouvre" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="+" org.eventb.core.comment="l'usager ne fait pas encore partie de l'ensemble" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∉ usagers"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="péage1 ≔ péage1 ∪ {usager}" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∉ péage1"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="usager ∉ péage2"/>
+        <org.eventb.core.guard name="internal1" org.eventb.core.comment="l'usager n'est pas déjà dans le tronçon" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∉ usagers"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="Si la barrière est fermée" org.eventb.core.label="grd11" org.eventb.core.predicate="bar1 = FALSE"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ TRUE" org.eventb.core.comment="Alors la barrière s'ouvre" org.eventb.core.label="act11"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd13" org.eventb.core.predicate="usager ∉ péage1"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd14" org.eventb.core.predicate="usager ∉ péage2"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd15" org.eventb.core.predicate="usager ∉ usagers"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="péage1 ≔ péage1 ∪ {usager}" org.eventb.core.label="act13"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="-" org.eventb.core.comment="Après que l'usagers soit entré sur le tronçon, il faut refermer la barrière" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_entré">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barrière d'entrée est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar1 = TRUE"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barrière d'entrée est ouverte" org.eventb.core.label="grd11" org.eventb.core.predicate="bar1 = TRUE"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act11"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ péage1"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="péage1 ≔ péage1 ∖ {usager}" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.label="act3"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd12" org.eventb.core.predicate="usager ∈ péage1"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="péage1 ≔ péage1 ∖ {usager}" org.eventb.core.label="act12"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="bar2 ∈ BOOL"/>
     <org.eventb.core.variable name="/" org.eventb.core.comment="barrière du péage de sortie" org.eventb.core.identifier="bar2"/>
+    <org.eventb.core.event name="=" org.eventb.core.comment="Entre dans la zone du péage de sortie" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="début_sortie">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd11" org.eventb.core.predicate="usager ∈ usagers"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="péage2 ≔ péage2 ∪ {usager}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd12" org.eventb.core.predicate="usager ∉ péage2"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd13" org.eventb.core.predicate="usager ∉ péage1"/>
+    </org.eventb.core.event>
     <org.eventb.core.event name="0" org.eventb.core.comment="À l'arrivé d'un usager au péage de sortie, la barrière s'ouvre" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir_tronçon">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortir_tronçon"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="La barrière (bar2) est fermée" org.eventb.core.label="grd1" org.eventb.core.predicate="bar2 = FALSE"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="bar2 ≔ TRUE" org.eventb.core.comment="La barrière (bar2) s'ouvre" org.eventb.core.label="act1"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="+" org.eventb.core.comment="L'usager doit faire partie de l'ensemble" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="usagers ≔ usagers ∖ {usager}" org.eventb.core.comment="On enlève l'usager de l'ensemble" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="bar1 = FALSE"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="péage2 ≔ péage2 ∪ {usager}" org.eventb.core.label="act3"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="usager"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="La barrière (bar2) est fermée" org.eventb.core.label="grd11" org.eventb.core.predicate="bar2 = FALSE"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="bar2 ≔ TRUE" org.eventb.core.comment="La barrière (bar2) s'ouvre" org.eventb.core.label="act11"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd13" org.eventb.core.predicate="bar1 = FALSE"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="usagers ≔ usagers ∖ {usager}" org.eventb.core.label="act12"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd14" org.eventb.core.predicate="usager ∈ péage2"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd15" org.eventb.core.predicate="usager ∈ usagers"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd16" org.eventb.core.predicate="usager ∉ péage2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fermeture_sortie">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barière de sortie est ouverte" org.eventb.core.label="grd1" org.eventb.core.predicate="bar2 = TRUE"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="bar2 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ péage2"/>
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Si la barière de sortie est ouverte" org.eventb.core.label="grd11" org.eventb.core.predicate="bar2 = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="bar2 ≔ FALSE" org.eventb.core.comment="Alors la barrière se ferme" org.eventb.core.label="act11"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd12" org.eventb.core.predicate="usager ∉ péage2"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="péage2 ≔ péage2 ∖ {usager}" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="péage2 ≔ péage2 ∖ {usager}" org.eventb.core.label="act13"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd13" org.eventb.core.predicate="usager ∈ usagers"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd14" org.eventb.core.predicate="usager ∉ péage1"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="2" org.eventb.core.comment="les ussagers du tronçon payant" org.eventb.core.identifier="usagers"/>
     <org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="usagers ⊆ USAGERS"/>
     <org.eventb.core.variable name="4" org.eventb.core.comment="les usagers dans le premier péage" org.eventb.core.identifier="péage1"/>
-    <org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="péage1 ⊆ USAGERS"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="péage1 ⊆ usagers"/>
     <org.eventb.core.variable name="7" org.eventb.core.comment="les usagers dans le deuxième péage" org.eventb.core.identifier="péage2"/>
-    <org.eventb.core.invariant name="8" org.eventb.core.label="inv6" org.eventb.core.predicate="péage2 ⊆ USAGERS"/>
+    <org.eventb.core.invariant name="8" org.eventb.core.label="inv6" org.eventb.core.predicate="péage2 ⊆ usagers"/>
     <org.eventb.core.invariant name=";" org.eventb.core.label="inv9" org.eventb.core.predicate="péage1 ∩ péage2 = ∅"/>
 </org.eventb.core.machineFile>
