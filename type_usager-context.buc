@@ -7,4 +7,8 @@
 <org.eventb.core.axiom name="-" org.eventb.core.comment="Les usagers qui utilisent un ticket sont des usagers du tronçon" org.eventb.core.label="axm2" org.eventb.core.predicate="TICKET_USAGERS ⊆ USAGERS"/>
 <org.eventb.core.axiom name="." org.eventb.core.comment="Un usager d'un ensemble ne peut pas faire partie de l'autre" org.eventb.core.label="axm3" org.eventb.core.predicate="BADGE_USAGERS ∩ TICKET_USAGERS = ∅"/>
 <org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="BADGE_USAGERS ∪ TICKET_USAGERS = USAGERS"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="John"/>
+<org.eventb.core.constant name="1" org.eventb.core.identifier="Anna"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="Julie"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(BADGE_USAGERS, {John}, {Julie}, {Anna})"/>
 </org.eventb.core.contextFile>
