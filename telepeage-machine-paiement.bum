@@ -1,44 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="usagers_badge ≔ ∅" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="dispositif ≔ FALSE" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="a_signaler ≔ ∅" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="date ≔ 1" org.eventb.core.label="act5"/>
-    </org.eventb.core.event>
-    <org.eventb.core.refinesMachine name="(" org.eventb.core.target="peage-machine-usager"/>
-    <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_tele">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_tronçon"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="L'usager n'est pas encore passé donc il n'a pas payé encore" org.eventb.core.label="grd1" org.eventb.core.predicate="dispositif = FALSE"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="+" org.eventb.core.comment="On ne regarde pas si l'usager a un badge ou non, on  gère pas le cas içi" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ USAGERS"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="dispositif ≔ TRUE" org.eventb.core.comment="Le dispositif détecte qu'un usager est passé" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers_badge ⊆ BADGE_USAGERS"/>
-    <org.eventb.core.variable name="+" org.eventb.core.comment="Usagers avec un badge de télépéage" org.eventb.core.identifier="usagers_badge"/>
-    <org.eventb.core.seesContext name="," org.eventb.core.target="type_usager-context"/>
-    <org.eventb.core.variable name="-" org.eventb.core.comment="Dispositif de détection de passage d'un usager Vrai si un usager venant de passer a été enregistré" org.eventb.core.identifier="dispositif"/>
-    <org.eventb.core.invariant name=":" org.eventb.core.label="inv6" org.eventb.core.predicate="a_signaler ⊆ USAGERS"/>
-    <org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="dispositif ∈ BOOL"/>
-    <org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="date ∈ ℕ1"/>
-    <org.eventb.core.variable name="1" org.eventb.core.comment="Date de passage" org.eventb.core.identifier="date"/>
-    <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortie_tele">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="L'usager est déjà passé" org.eventb.core.label="grd1" org.eventb.core.predicate="dispositif = TRUE"/>
-        <org.eventb.core.refinesEvent name="(" org.eventb.core.target="sortir_tronçon"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="grd1" org.eventb.core.comment="L'usager a un badge" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ usagers_badge"/>
-        <org.eventb.core.action name="act1" org.eventb.core.assignment="dispositif ≔ FALSE" org.eventb.core.comment="Le dispositif revient à l'état de départ" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="non_autorise">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="Si l'usager n'a pas de badge" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∉ usagers_badge"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∈ USAGERS"/>
-        <org.eventb.core.guard name=")" org.eventb.core.comment="Si l'usager a traversé le télépéage" org.eventb.core.label="grd2" org.eventb.core.predicate="dispositif = TRUE"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="a_signaler ≔ a_signaler ∪ {usager}" org.eventb.core.comment="On ajoute l'usager aux signalements" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="incremente_date">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="date ≔ date + 1" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="date ≤ 50 "/>
-    </org.eventb.core.event>
-    <org.eventb.core.variable name="9" org.eventb.core.identifier="a_signaler"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="," org.eventb.core.assignment="badge_usagers ≔ ∅" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="a_verifier ≔ ∅" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="dispositif ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="a_signaler ≔ ∅" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="peage-machine-usager"/>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrer_tele">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_tronçon"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a_verifier ≔ a_verifier ∪ {usager}" org.eventb.core.comment="L'usager fait maintenant parti des usagers à vérifier" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="internal2" org.eventb.core.comment="L'usager n'est pas déjà à vérifier" org.eventb.core.label="grd4" org.eventb.core.predicate="usager ∉ a_verifier"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="L'usager n'est pas encore passé donc il n'a pas été détecté encore" org.eventb.core.label="grd2" org.eventb.core.predicate="dispositif = FALSE"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="On ne regarde pas si l'usager a un badge ou non, on les prends tous on  gère pas le cas içi" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∈ USAGERS"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="dispositif ≔ TRUE" org.eventb.core.comment="Le dispositif détecte qu'un usager est passé" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers ⊆ USAGERS"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="Usagers sur l'autoroute avec un badge de télépéage" org.eventb.core.identifier="badge_usagers"/>
+<org.eventb.core.seesContext name="," org.eventb.core.target="telepeage-context"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment="Dispositif de détection de passage d'un usager Vrai si un usager vient de passer le télépéage" org.eventb.core.identifier="dispositif"/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv7" org.eventb.core.predicate="badge_usagers ⊆ BADGE_USAGERS"/>
+<org.eventb.core.invariant name="B" org.eventb.core.label="inv8" org.eventb.core.predicate="a_verifier ⊆ USAGERS"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv6" org.eventb.core.predicate="a_signaler ⊆ USAGERS"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="dispositif ∈ BOOL"/>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="autorise">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="L'usager est à vérifier" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ a_verifier"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="L'usager avait un badge" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ BADGE_USAGERS"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="L'usager ne fait pas partie de ceux n'ayant pas de badge" org.eventb.core.label="grd4" org.eventb.core.predicate="usager ∉ FRAUDULEUX_USAGERS"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Un usager a bien traversé le télépéage" org.eventb.core.label="grd3" org.eventb.core.predicate="dispositif = TRUE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="dispositif ≔ FALSE" org.eventb.core.comment="Le dispositif se remet dans son état de départ car l'usager est passé" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="badge_usagers ≔ badge_usagers ∪ {usager}" org.eventb.core.comment="On ajoute les usagers avec un badge sur le tronçon dans la liste" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="a_verifier ≔ a_verifier ∖ {usager}" org.eventb.core.comment="On enlève l'usager de la liste des usagers à vérifier" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="non_autorise">
+<org.eventb.core.guard name="2" org.eventb.core.comment="L'usager est à vérifier" org.eventb.core.label="grd6" org.eventb.core.predicate="usager ∈ a_verifier"/>
+<org.eventb.core.guard name="'" org.eventb.core.comment="Si l'usager n'a pas de badge" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∉ BADGE_USAGERS"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="usager"/>
+<org.eventb.core.guard name="1" org.eventb.core.comment="L'usager fait partie de ceux n'ayant pas de badge" org.eventb.core.label="grd5" org.eventb.core.predicate="usager ∈ FRAUDULEUX_USAGERS"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Si l'usager a traversé le télépéage" org.eventb.core.label="grd4" org.eventb.core.predicate="dispositif = TRUE"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="dispositif ≔ FALSE" org.eventb.core.comment="Le dispositif se remet dans son état de départ car l'usager est passé" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="a_signaler ≔ a_signaler ∪ {usager}" org.eventb.core.comment="On ajoute l'usager aux signalements" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="a_verifier ≔ a_verifier ∖ {usager}" org.eventb.core.comment="On enlève l'usager de la liste des usagers à vérifier" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortie_tele">
+<org.eventb.core.refinesEvent name="(" org.eventb.core.target="sortir_tronçon"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="L'usager ne fait pas parti des usagers à vérifier" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∉ a_verifier"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="9" org.eventb.core.comment="Usager à signaler" org.eventb.core.identifier="a_signaler"/>
+<org.eventb.core.variable name="=" org.eventb.core.comment="Usager sur l'autoroute" org.eventb.core.identifier="usagers"/>
+<org.eventb.core.variable name="A" org.eventb.core.comment="Usager qui n'ont pas été vérifié encore, s'ils ont un badge ou non" org.eventb.core.identifier="a_verifier"/>
 </org.eventb.core.machineFile>
