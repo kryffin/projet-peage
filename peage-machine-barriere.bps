@@ -7,27 +7,27 @@
     <org.eventb.core.psStatus name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="début_entrée/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon_tele/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon_tele/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="250" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="250" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="entrer_tronçon_barriere/usagers/EQL" org.eventb.core.confidence="1000" org.eventb.core.poStamp="250" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="fermeture_entré/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="autorise/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="autorise/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="autorise/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="non_autorise/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="non_autorise/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="non_autorise/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="début_sortie_badge/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="début_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_frauduleux/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_frauduleux/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="sortir_tronçon_barriere/usagers/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="fermeture_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="248" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_tele/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="258" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_tele/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="258" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_barriere/usagers/EQL" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="autorise/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="autorise/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="autorise/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="non_autorise/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="non_autorise/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="non_autorise/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_sortie_badge/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_badge/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_frauduleux/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_frauduleux/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/usagers/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="256" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

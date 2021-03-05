@@ -2468,32 +2468,32 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortir_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="ALLUSAGERS">
+    <org.eventb.core.prProof name="sortir_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="ALLUSAGERS">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(TICKET_USAGERS,{Sophie}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
-                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
-                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p26"/>
-                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p27"/>
-                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p28"/>
-                                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p29"/>
-                                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p30"/>
-                                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p31"/>
-                                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p32"/>
-                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with TICKET_USAGERS={Sophie}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p21">
-                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p34">
-                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p33"/>
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p23"/>
+                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p24"/>
+                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p25"/>
+                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p26"/>
+                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p27"/>
+                                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p28"/>
+                                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p29"/>
+                                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p30"/>
+                                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p31"/>
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with TICKET_USAGERS={Sophie}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p32"/>
                                         <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p13"/>
-                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p34" org.eventb.core.prHyps="p14,p2,p11,p3,p17,p7,p4,p18,p19,p6,p13,p8,p16,p1,p15,p9,p20,p21,p22,p23,p33">
+                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="p14,p2,p11,p3,p16,p7,p4,p17,p18,p6,p13,p8,p15,p1,p9,p19,p20,p21,p22,p32">
                                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                         </org.eventb.core.prRule>
                                     </org.eventb.core.prAnte>
@@ -2513,7 +2513,6 @@
         <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="badge_usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
-        <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
         <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
@@ -2522,43 +2521,44 @@
         <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="bar2=FALSE"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="BADGE_USAGERS∪FRAUDULEUX_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="badge_usagers⊆BADGE_USAGERS"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="péage1∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TICKET_USAGERS∪USAGERS=ALLUSAGERS"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_usagers⊆usagers"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="usager∉péage1"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="BADGE_USAGERS∩FRAUDULEUX_USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="TICKET_USAGERS={Sophie}"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="TICKET_USAGERS={Sophie}"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="bar1=FALSE"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="dispositif_payé∈BOOL">
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="dispositif_payé∈BOOL">
             <org.eventb.core.prIdent name="dispositif_payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="usagers⊆ALLUSAGERS"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="dispositif∈BOOL">
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="usagers⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="dispositif∈BOOL">
             <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="ticket_usagers⊆{Sophie}"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="a_verifier⊆USAGERS"/>
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="ticket_usagers⊆{Sophie}"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="a_verifier⊆USAGERS"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="FRAUDULEUX_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="péage2⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="péage2⊆ALLUSAGERS"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="USAGERS≠(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="bar2∈BOOL"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="bar2∈BOOL"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usager∈péage2"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(TICKET_USAGERS,{Sophie})"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆TICKET_USAGERS"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="ticket_usagers⊆TICKET_USAGERS"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="péage1⊆ALLUSAGERS"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="usager∈usagers"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="TICKET_USAGERS∩USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="bar1∈BOOL"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆{Sophie}"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="a_signaler⊆FRAUDULEUX_USAGERS"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬usager∈péage1"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="usager∈ticket_usagers"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="TICKET_USAGERS⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="péage1⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="usager∈usagers"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="TICKET_USAGERS∩USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆{Sophie}"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="a_signaler⊆FRAUDULEUX_USAGERS"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬usager∈péage1"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="usager∈ticket_usagers"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="TICKET_USAGERS⊆ALLUSAGERS"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
@@ -5917,28 +5917,28 @@
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="ALLUSAGERS">
+    <org.eventb.core.prProof name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="ALLUSAGERS">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(TICKET_USAGERS,{Sophie}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
-                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
-                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p26"/>
-                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p27"/>
-                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p28"/>
-                                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p29"/>
-                                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p30"/>
-                                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p31"/>
-                                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p32"/>
-                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14,p2,p11,p3,p17,p7,p4,p18,p19,p6,p13,p8,p16,p1,p15,p9,p20,p21,p22,p23">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p23"/>
+                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p24"/>
+                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p25"/>
+                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p26"/>
+                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p27"/>
+                                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p28"/>
+                                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p29"/>
+                                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p30"/>
+                                <org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p31"/>
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p14,p2,p11,p3,p16,p7,p4,p17,p18,p6,p13,p8,p15,p1,p9,p19,p20,p21,p22">
                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                 </org.eventb.core.prRule>
                             </org.eventb.core.prAnte>
@@ -5956,7 +5956,6 @@
         <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="badge_usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
-        <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
         <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
         <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
@@ -5965,41 +5964,42 @@
         <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="bar2=FALSE"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="BADGE_USAGERS∪FRAUDULEUX_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="badge_usagers⊆BADGE_USAGERS"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="péage1∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="TICKET_USAGERS∪USAGERS=ALLUSAGERS"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="ticket_usagers⊆usagers"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="usager∉péage1"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="BADGE_USAGERS∩FRAUDULEUX_USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="TICKET_USAGERS={Sophie}"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="TICKET_USAGERS={Sophie}"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="bar1=FALSE"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="dispositif_payé∈BOOL">
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="dispositif_payé∈BOOL">
             <org.eventb.core.prIdent name="dispositif_payé" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆usagers ∖ {usager}"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="usagers⊆ALLUSAGERS"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="dispositif∈BOOL">
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="usagers⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="dispositif∈BOOL">
             <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="a_verifier⊆USAGERS"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="a_verifier⊆USAGERS"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="FRAUDULEUX_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="péage2⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="péage2⊆ALLUSAGERS"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="USAGERS≠(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="bar2∈BOOL"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="bar2∈BOOL"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usager∈péage2"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(TICKET_USAGERS,{Sophie})"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="ticket_usagers⊆TICKET_USAGERS"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="péage1⊆ALLUSAGERS"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="usager∈usagers"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="TICKET_USAGERS∩USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="bar1∈BOOL"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="a_signaler⊆FRAUDULEUX_USAGERS"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬usager∈péage1"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="usager∈ticket_usagers"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="TICKET_USAGERS⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="péage1⊆ALLUSAGERS"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="usager∈usagers"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="TICKET_USAGERS∩USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="bar1∈BOOL">
+            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="a_signaler⊆FRAUDULEUX_USAGERS"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬usager∈péage1"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="usager∈ticket_usagers"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="TICKET_USAGERS⊆ALLUSAGERS"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
