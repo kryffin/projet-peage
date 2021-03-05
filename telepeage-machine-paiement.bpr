@@ -1,673 +1,681 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.prFile version="1">
-    <org.eventb.core.prProof name="INITIALISATION/act3/SIM"/>
-    <org.eventb.core.prProof name="entrer_tele/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p9"/>
-                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p9"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
-                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
-                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
-                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p15"/>
-                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p4,p5,p2,p7,p3,p6,p1">
-                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="usagers_badge" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS∩TICKET_USAGERS=(∅ ⦂ ℙ(USAGERS))"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers_badge⊆BADGE_USAGERS"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="usagers⊆USAGERS"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="BADGE_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="BADGE_USAGERS∪TICKET_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉usagers"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="dispositif=FALSE"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬usager∈usagers"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="dispositif∈BOOL"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TICKET_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="date∈ℕ1"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="usager∈USAGERS"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="INITIALISATION/inv3/INV"/>
-    <org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈ℕ1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="incremente_date/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="date∈ℕ1"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="date+1∈ℕ1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p1,p7,p3,p5,p2,p6">
-                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="usagers_badge" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∈usagers"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="BADGE_USAGERS∩TICKET_USAGERS=(∅ ⦂ ℙ(USAGERS))"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="dispositif=TRUE"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers_badge⊆BADGE_USAGERS"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usagers⊆USAGERS"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="dispositif∈BOOL"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TICKET_USAGERS=USAGERS"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="date∈ℕ1"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="usager∈usagers_badge"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="BADGE_USAGERS∪TICKET_USAGERS=USAGERS"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="usager_courant'" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager_courant'∈(∅ ⦂ ℙ(USAGERS))"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="incremente_date/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with histo_passage=usager_courant ↦ date" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
-                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7"/>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prIdent name="histo_passage" org.eventb.core.type="USAGERS×ℤ"/>
-        <org.eventb.core.prIdent name="usager_courant" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="histo_passage=usager_courant ↦ date"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="date=date+1"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="histo_passage=usager_courant ↦ date+1"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="usager_courant ↦ date=usager_courant ↦ date+1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prIdent name="usager_courant" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager ↦ date=usager_courant ↦ date"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager=usager_courant"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="inv1/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USAGERS))⊆BADGE_USAGERS"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="entrer_tele/grd11/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
-                <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p7"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="usager∈USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="entrer_tele/grd13/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="péage1" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉péage1"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usager∈USAGERS"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈péage1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="entrer_tele/grd14/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉péage2"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usager∈USAGERS"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈péage2"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="entrer_tele/grd15/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
-                        <org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p9"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉usagers"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈usagers"/>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆USAGERS"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="usager∈USAGERS"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd11/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd13/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd14/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd15/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
-                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
-                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
-                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
-                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
-                <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p6"/>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-            <org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="sortie_tele/grd16/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
-        <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
-                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
-                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
-                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
-                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
-                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p8"/>
-                    </org.eventb.core.prAnte>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="péage2" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆USAGERS">
-            <org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="bar1∈BOOL">
-            <org.eventb.core.prIdent name="bar1" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="bar2∈BOOL">
-            <org.eventb.core.prIdent name="bar2" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dispositif∈BOOL">
-            <org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="a_signaler⊆USAGERS">
-            <org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉péage2"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
-            <org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈péage2"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-    </org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act3/SIM"/>
+<org.eventb.core.prProof name="entrer_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager∉usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬usager∈usagers"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆USAGERS"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="usager∈USAGERS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="incremente_date/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="date∈ℕ1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="date+1∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="sortie_tele/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="usager_courant'" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager_courant'∈(∅ ⦂ ℙ(USAGERS))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="incremente_date/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with histo_passage=usager_courant ↦ date" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="histo_passage" org.eventb.core.type="USAGERS×ℤ"/>
+<org.eventb.core.prIdent name="usager_courant" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="histo_passage=usager_courant ↦ date"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="date=date+1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="histo_passage=usager_courant ↦ date+1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="usager_courant ↦ date=usager_courant ↦ date+1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="sortie_tele/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="date" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usager_courant" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usager ↦ date=usager_courant ↦ date"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager=usager_courant"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv1/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USAGERS))⊆BADGE_USAGERS"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="entrer_tele/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BADGE_USAGERS,{John},{Julie},{Anna}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p15"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="BADGE_USAGERS={John,Julie,Anna}">
+<org.eventb.core.prIdent name="Anna" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="John" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="Julie" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬John=Julie">
+<org.eventb.core.prIdent name="John" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="Julie" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(BADGE_USAGERS,{John},{Julie},{Anna})">
+<org.eventb.core.prIdent name="Anna" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="John" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="Julie" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="usager∉usagers">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="usager∉a_verifier">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬John=Anna">
+<org.eventb.core.prIdent name="Anna" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="John" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬usager∈usagers">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Julie=Anna">
+<org.eventb.core.prIdent name="Anna" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="Julie" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬usager∈a_verifier">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="usager∈USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="a_verifier⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="sortie_tele/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="non_autorise/usagers/EQL" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∈usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usager∉a_signaler">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈a_signaler">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usagers∪{usager}=usagers"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="entrer_tele/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usagers∪{usager}⊆BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤∧usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="usagers⊆USAGERS"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usager∉usagers"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈usagers"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usagers⊆BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="usagers⊆BADGE_USAGERS∧usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="usager∈USAGERS"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="sortie_tele/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="non_autorise/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p5,p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p13"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usagers∪{usager}⊆BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="usagers⊆USAGERS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usager∉a_signaler">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬usager∈a_signaler">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∉BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usagers⊆BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="usagers⊆BADGE_USAGERS∧usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤∧⊥"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USAGERS))⊆BADGE_USAGERS"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="autorise/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="badge_usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="badge_usagers⊆BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬usager∈FRAUDULEUX_USAGERS">
+<org.eventb.core.prIdent name="FRAUDULEUX_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="usager∉FRAUDULEUX_USAGERS">
+<org.eventb.core.prIdent name="FRAUDULEUX_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="badge_usagers⊆BADGE_USAGERS∧usager∈BADGE_USAGERS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="badge_usagers∪{usager}⊆BADGE_USAGERS"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="autorise/usagers/EQL" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="USAGERS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="usager" org.eventb.core.type="USAGERS"/>
+<org.eventb.core.prIdent name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="FRAUDULEUX_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="FRAUDULEUX_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="usagers⊆USAGERS"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="a_signaler⊆USAGERS">
+<org.eventb.core.prIdent name="a_signaler" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="usager∉usagers"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS">
+<org.eventb.core.prIdent name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬usager∈usagers"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="usager∈usagers"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dispositif∈BOOL">
+<org.eventb.core.prIdent name="dispositif" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬usager∈FRAUDULEUX_USAGERS">
+<org.eventb.core.prIdent name="FRAUDULEUX_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="usagers∪{usager}=usagers"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="usager∉FRAUDULEUX_USAGERS">
+<org.eventb.core.prIdent name="FRAUDULEUX_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="a_verifier⊆USAGERS">
+<org.eventb.core.prIdent name="a_verifier" org.eventb.core.type="ℙ(USAGERS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>
