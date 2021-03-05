@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="228">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="193">
+<org.eventb.core.poFile org.eventb.core.poStamp="229">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="ALLUSAGERS" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poPredicate name="ALLUSAGERT" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.axiom#)"/>
@@ -11,14 +11,12 @@
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERU" org.eventb.core.predicate="FRAUDULEUX_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#-"/>
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERV" org.eventb.core.predicate="BADGE_USAGERS∩FRAUDULEUX_USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#."/>
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERW" org.eventb.core.predicate="BADGE_USAGERS∪FRAUDULEUX_USAGERS=USAGERS" org.eventb.core.source="/projet-peage/telepeage-context.buc|org.eventb.core.contextFile#telepeage-context|org.eventb.core.axiom#\/"/>
-        <org.eventb.core.poIdentifier name="Sophie" org.eventb.core.type="ALLUSAGERS"/>
         <org.eventb.core.poIdentifier name="TICKET_USAGERS" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERX" org.eventb.core.predicate="TICKET_USAGERS⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#G"/>
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERY" org.eventb.core.predicate="TICKET_USAGERS∩USAGERS=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#H"/>
         <org.eventb.core.poPredicate name="FRAUDULEUX_USAGERZ" org.eventb.core.predicate="TICKET_USAGERS∪USAGERS=ALLUSAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#M"/>
-        <org.eventb.core.poPredicate name="FRAUDULEUX_USAGER[" org.eventb.core.predicate="partition(TICKET_USAGERS,{Sophie})" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#N"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="215">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="ticket_usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="a_signaler" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="ticket_inséré" org.eventb.core.type="BOOL"/>
@@ -54,7 +52,7 @@
         <org.eventb.core.poPredicate name="ticket_usages-" org.eventb.core.predicate="dispositif∈BOOL" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.invariant#Q"/>
         <org.eventb.core.poPredicate name="ticket_usages." org.eventb.core.predicate="badge_usagers⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.invariant#R"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))∩(∅ ⦂ ℙ(ALLUSAGERS))=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -63,7 +61,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))⊆TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#R"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -72,7 +70,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))⊆(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -81,7 +79,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))⊆USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#U"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -90,7 +88,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))⊆FRAUDULEUX_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -99,7 +97,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="218">
+    <org.eventb.core.poSequent name="INITIALISATION/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ALLUSAGERS))⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#X"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#'"/>
@@ -108,7 +106,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#INITIALISATION\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage1'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
@@ -125,8 +123,8 @@
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="payé'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey;" org.eventb.core.poStamp="218"/>
-    <org.eventb.core.poSequent name="début_entrée/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey;" org.eventb.core.poStamp="229"/>
+    <org.eventb.core.poSequent name="début_entrée/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey="/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(péage1∪{usager})∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#&gt;"/>
@@ -135,32 +133,32 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#début_entrée\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey=" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey=" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage1'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey=" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey=" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey=" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey=" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉péage1" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey&gt;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey&gt;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="bouton_presse'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="ticket_pris'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey&gt;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey&gt;" org.eventb.core.poStamp="226">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey&gt;" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey&gt;" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#,|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈péage1" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#,|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉péage2" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#,|org.eventb.core.guard#\/"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="bouton_presse=FALSE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#,|org.eventb.core.guard#0"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="usager∈TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#,|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey?" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="218">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey?" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="ticket_pris'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey?" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey?" org.eventb.core.poStamp="225">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey?" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey?" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#0|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bouton_presse=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#0|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ticket_pris=FALSE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#0|org.eventb.core.guard#+"/>
@@ -168,7 +166,7 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="usager∉péage2" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#0|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="usager∈TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#0|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="entrer_tronçon_tele/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="entrer_tronçon_tele/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey@"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers⊆usagers∪{usager}" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#E"/>
@@ -177,7 +175,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#entrer_tronçon_tele\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="entrer_tronçon_tele/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="entrer_tronçon_tele/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-contey@"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a_verifier∪{usager}⊆USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#U"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#E"/>
@@ -186,13 +184,13 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#entrer_tronçon_tele\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey@" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-contey@" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="a_verifier'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey@" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey@" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-contey@" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-contey@" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉a_verifier" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#)|org.eventb.core.guard#internal2"/>
@@ -203,7 +201,7 @@
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#E|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#E|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="entrer_tronçon_barriere/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="entrer_tronçon_barriere/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyA"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers∪{usager}⊆TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#R"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,"/>
@@ -212,7 +210,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#entrer_tronçon_barriere\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="entrer_tronçon_barriere/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="entrer_tronçon_barriere/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyA"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers∪{usager}⊆usagers∪{usager}" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,"/>
@@ -221,13 +219,13 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#entrer_tronçon_barriere\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyA" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyA" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="ticket_usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyA" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyA" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyA" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyA" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,|org.eventb.core.guard#internal1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bar1=FALSE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈péage1" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#,|org.eventb.core.guard#-"/>
@@ -238,7 +236,7 @@
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="bouton_presse=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#4|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="ticket_pris=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#4|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="fermeture_entré/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="fermeture_entré/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyB"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(péage1 ∖ {usager})∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-"/>
@@ -247,14 +245,14 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#fermeture_entré\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyB" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyB" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage1'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="bar1'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="bouton_presse'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="ticket_pris'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyB" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyB" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyB" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyB" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar1=TRUE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈péage1" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#-|org.eventb.core.guard#-"/>
@@ -263,7 +261,7 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="bouton_presse=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#5|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="ticket_pris=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#5|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="autorise/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="autorise/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyC"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(péage1 ∖ {usager})∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#H"/>
@@ -272,7 +270,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#autorise\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="autorise/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="autorise/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyC"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a_verifier ∖ {usager}⊆USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#U"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#H"/>
@@ -281,7 +279,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#autorise\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="autorise/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="autorise/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyC"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="badge_usagers∪{usager}⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#X"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#H"/>
@@ -290,20 +288,20 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#autorise\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyC" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyC" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage1'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="badge_usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="a_verifier'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyC" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyC" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyC" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyC" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈a_verifier" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#?|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈BADGE_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#?|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉FRAUDULEUX_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#?|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="non_autorise/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="non_autorise/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyD"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(péage1 ∖ {usager})∩péage2=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#I"/>
@@ -312,7 +310,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#non_autorise\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="non_autorise/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="non_autorise/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyD"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a_verifier ∖ {usager}⊆USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#U"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#I"/>
@@ -321,7 +319,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#non_autorise\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="non_autorise/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="non_autorise/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyD"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a_signaler∪{usager}⊆FRAUDULEUX_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#I"/>
@@ -330,20 +328,20 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#non_autorise\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyD" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyD" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage1'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="dispositif'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="a_signaler'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="a_verifier'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyD" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyD" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyD" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyD" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈a_verifier" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#2"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉BADGE_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈FRAUDULEUX_USAGERS" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#1"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dispositif=TRUE" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#3|org.eventb.core.guard#)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="début_sortie/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="début_sortie/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyE"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="péage1∩(péage2∪{usager})=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#M"/>
@@ -352,39 +350,39 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#début_sortie\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyE" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyE" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage2'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyE" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyE" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyE" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyE" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#M|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#M|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉péage1" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#M|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usager∈ticket_usagers∪(a_signaler∩usagers)" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#M|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#A|org.eventb.core.guard#)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyF" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyF" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="ticket_inséré'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="payé'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyF" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyF" org.eventb.core.poStamp="227">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyF" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyF" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#6|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#6|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ticket_inséré=FALSE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#6|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usager∈TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#6|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyG" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyG" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="payé'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyG" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyG" org.eventb.core.poStamp="228">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyG" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyG" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ticket_inséré=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usager∈TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="début_sortie_badge/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="début_sortie_badge/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyH"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="péage1∩(péage2∪{usager})=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#="/>
@@ -393,19 +391,19 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#début_sortie_badge\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyH" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyH" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="dispositif_payé'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="péage2'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyH" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyH" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyH" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyH" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#=|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#=|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉péage1" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#=|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dispositif_payé=TRUE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#=|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="usager∈badge_usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#=|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_barriere/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyI"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆TICKET_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#R"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#0"/>
@@ -414,7 +412,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_barriere\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="sortir_tronçon_barriere/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_barriere/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyI"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers ∖ {usager}⊆usagers ∖ {usager}" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#0"/>
@@ -423,13 +421,13 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_barriere\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyI" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyI" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="ticket_usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyI" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyI" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyI" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyI" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#0|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bar2=FALSE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#0|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#0|org.eventb.core.guard#2"/>
@@ -439,7 +437,7 @@
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="payé=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#?|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="ticket_inséré=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#?|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="fermeture_sortie/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="fermeture_sortie/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyJ"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="péage1∩(péage2 ∖ {usager})=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#1"/>
@@ -448,14 +446,14 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#fermeture_sortie\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyJ" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyJ" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage2'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="bar2'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="ticket_inséré'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="payé'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyJ" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyJ" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyJ" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyJ" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bar2=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#@|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#@|org.eventb.core.guard#internal1"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#@|org.eventb.core.guard#-"/>
@@ -464,7 +462,7 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ticket_inséré=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#@|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="payé=TRUE" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.event#@|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="sortir_tronçon_frauduleux/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_frauduleux/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyK"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="péage1∩(péage2 ∖ {usager})=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#G"/>
@@ -473,7 +471,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_frauduleux\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="sortir_tronçon_frauduleux/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_frauduleux/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyK"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers⊆usagers ∖ {usager}" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#G"/>
@@ -482,18 +480,18 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_frauduleux\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyK" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyK" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="péage2'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyK" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyK" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyK" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyK" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉a_verifier" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#D|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈a_signaler∩usagers" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#D|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#G|org.eventb.core.guard#)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyL"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="péage1∩(péage2 ∖ {usager})=(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#J"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#F"/>
@@ -502,7 +500,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_badge\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyL"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ticket_usagers⊆usagers ∖ {usager}" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#T"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#F"/>
@@ -511,7 +509,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_badge\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="224">
+    <org.eventb.core.poSequent name="sortir_tronçon_badge/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTALLHYPtype_usager-conteyL"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="badge_usagers ∖ {usager}⊆BADGE_USAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#X"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#F"/>
@@ -520,21 +518,21 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poSequent#sortir_tronçon_badge\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyL" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTIDENTtype_usager-conteyL" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poIdentifier name="badge_usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="dispositif_payé'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="péage2'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
         <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyL" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyL" org.eventb.core.poStamp="224">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPtype_usager-conteyL" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#EVTIDENTtype_usager-conteyL" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∉a_verifier" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="usager∈badge_usagers" org.eventb.core.source="/projet-peage/telepeage-machine-paiement.bum|org.eventb.core.machineFile#telepeage-machine-paiement|org.eventb.core.event#5|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="usager∈péage2" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#F|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="dispositif_payé=FALSE" org.eventb.core.source="/projet-peage/peage-machine-barriere.bum|org.eventb.core.machineFile#peage-machine-barriere|org.eventb.core.event#F|org.eventb.core.guard#+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="216">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/ticket-machine.bpo|org.eventb.core.poFile#ticket-machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="229">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usagers⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#."/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bouton_presse∈BOOL" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ticket_pris∈BOOL" org.eventb.core.source="/projet-peage/ticket-machine.bum|org.eventb.core.machineFile#ticket-machine|org.eventb.core.invariant#3"/>
