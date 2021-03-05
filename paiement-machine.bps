@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="paiement_correct/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_correct/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_correct/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_incorrect/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_incorrect/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="paiement_incorrect/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="bon_payeur/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="bon_payeur/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="bon_payeur/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="mauvais_payeur/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="mauvais_payeur/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="mauvais_payeur/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_correct/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_correct/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_correct/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_incorrect/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_incorrect/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="paiement_incorrect/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="bon_payeur/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="bon_payeur/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="bon_payeur/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="mauvais_payeur/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="mauvais_payeur/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="mauvais_payeur/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="106" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

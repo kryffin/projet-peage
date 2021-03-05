@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+<org.eventb.core.poFile org.eventb.core.poStamp="6">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="ALLUSAGERS" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
+        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
+        <org.eventb.core.poPredicate name="ALLUSAGERT" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="ALLUSAGERU" org.eventb.core.predicate="USAGERS≠(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.axiom#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(USAGERS)"/>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="usagers" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexv" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexv" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexv" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexv" org.eventb.core.poStamp="2"/>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexw" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexv" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexv" org.eventb.core.poStamp="5"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexw" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexw" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexw" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexw" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexw" org.eventb.core.poStamp="6">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∉usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="usager∈USAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#,|org.eventb.core.guard#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(USAGERS)"/>
-        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="USAGERS"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="usagers'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
+        <org.eventb.core.poIdentifier name="usager" org.eventb.core.type="ALLUSAGERS"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexx" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPpeage-contexx" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#EVTIDENTpeage-contexx" org.eventb.core.poStamp="6">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usager∈usagers" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.event#-|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usagers⊆USAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.invariant#\/"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/peage-machine-usager.bpo|org.eventb.core.poFile#peage-machine-usager|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="usagers⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/peage-machine-usager.bum|org.eventb.core.machineFile#peage-machine-usager|org.eventb.core.invariant#\/"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

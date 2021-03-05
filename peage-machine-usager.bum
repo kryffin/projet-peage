@@ -8,6 +8,7 @@
         <org.eventb.core.parameter name="'" org.eventb.core.comment="un usager" org.eventb.core.identifier="usager"/>
         <org.eventb.core.guard name="(" org.eventb.core.comment="l'usager n'est pas déjà dans le tronçon" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∉ usagers"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.comment="l'usager fait maintenant parti des usagers du tronçon" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ USAGERS"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="-" org.eventb.core.comment="un usager sort du tronçon payant" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir_tronçon">
         <org.eventb.core.guard name="'" org.eventb.core.comment="l'usager est bien dans le tronçon" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ usagers"/>
@@ -15,5 +16,5 @@
         <org.eventb.core.parameter name=")" org.eventb.core.comment="un usager" org.eventb.core.identifier="usager"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="." org.eventb.core.comment="Tous les usagers courant du tronçon" org.eventb.core.identifier="usagers"/>
-    <org.eventb.core.invariant name="/" org.eventb.core.comment="les usagers courant du tronçon sont inclus dans tous les usagers" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers ⊆ USAGERS"/>
+    <org.eventb.core.invariant name="/" org.eventb.core.comment="les usagers courant du tronçon sont inclus dans tous les usagers" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers ⊆ ALLUSAGERS"/>
 </org.eventb.core.machineFile>

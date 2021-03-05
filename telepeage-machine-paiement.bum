@@ -11,11 +11,11 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_tronçon"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="a_verifier ≔ a_verifier ∪ {usager}" org.eventb.core.comment="L'usager fait maintenant parti des usagers à vérifier" org.eventb.core.label="act3"/>
         <org.eventb.core.guard name="internal2" org.eventb.core.comment="L'usager n'est pas déjà à vérifier" org.eventb.core.label="grd4" org.eventb.core.predicate="usager ∉ a_verifier"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="L'usager n'est pas encore passé donc il n'a pas été détecté encore" org.eventb.core.label="grd2" org.eventb.core.predicate="dispositif = FALSE"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="L'usager n'est pas encore passé donc il n'a pas été détecté encore" org.eventb.core.label="grd12" org.eventb.core.predicate="dispositif = FALSE"/>
         <org.eventb.core.guard name="+" org.eventb.core.comment="On ne regarde pas si l'usager a un badge ou non, on les prends tous on  gère pas le cas içi" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∈ USAGERS"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="dispositif ≔ TRUE" org.eventb.core.comment="Le dispositif détecte qu'un usager est passé" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="*" org.eventb.core.comment="tous les usagers courants sont dans les usagers" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers ⊆ USAGERS"/>
+    <org.eventb.core.invariant name="*" org.eventb.core.comment="tous les usagers courants sont dans les usagers" org.eventb.core.label="inv1" org.eventb.core.predicate="usagers ⊆ ALLUSAGERS"/>
     <org.eventb.core.variable name="+" org.eventb.core.comment="Usagers sur l'autoroute avec un badge de télépéage" org.eventb.core.identifier="badge_usagers"/>
     <org.eventb.core.variable name="-" org.eventb.core.comment="Dispositif de détection de passage d'un usager Vrai si un usager vient de passer le télépéage" org.eventb.core.identifier="dispositif"/>
     <org.eventb.core.invariant name="&gt;" org.eventb.core.comment="tous les usagers courants avec badge sont dans les usagers avec badge" org.eventb.core.label="inv7" org.eventb.core.predicate="badge_usagers ⊆ BADGE_USAGERS"/>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-    <org.eventb.core.scCarrierSet name="USAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USAGERS)"/>
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="USAGERS⊆ALLUSAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="USAGERS≠(∅ ⦂ ℙ(ALLUSAGERS))" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scCarrierSet name="ALLUSAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
+    <org.eventb.core.scConstant name="USAGERS" org.eventb.core.source="/projet-peage/peage-context.buc|org.eventb.core.contextFile#peage-context|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ALLUSAGERS)"/>
 </org.eventb.core.scContextFile>
