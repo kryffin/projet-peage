@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="peage-context"/>
-    <org.eventb.core.axiom name="1" org.eventb.core.label="axm1" org.eventb.core.predicate="TICKET_USAGERS ⊆  USAGERS"/>
-    <org.eventb.core.axiom name="2" org.eventb.core.label="axm2" org.eventb.core.predicate="BADGE_USAGERS ⊆  USAGERS"/>
-    <org.eventb.core.axiom name="." org.eventb.core.comment="Un usager d'un ensemble ne peut pas faire partie de l'autre" org.eventb.core.label="axm3" org.eventb.core.predicate="BADGE_USAGERS ∩ TICKET_USAGERS = ∅"/>
-    <org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="BADGE_USAGERS ∪ TICKET_USAGERS = USAGERS"/>
-    <org.eventb.core.constant name="3" org.eventb.core.comment="Tous les usagers du tronçon avec un badge de télépéage" org.eventb.core.identifier="BADGE_USAGERS"/>
+    <org.eventb.core.axiom name="1" org.eventb.core.label="axm11" org.eventb.core.predicate="USAGERS ⊆  ALLUSAGERS"/>
     <org.eventb.core.constant name="4" org.eventb.core.comment="Tous les usagers du tronçon qui utilisent un ticket" org.eventb.core.identifier="TICKET_USAGERS"/>
+    <org.eventb.core.extendsContext name="5" org.eventb.core.target="telepeage-context"/>
+    <org.eventb.core.axiom name="A" org.eventb.core.label="axm22" org.eventb.core.predicate="TICKET_USAGERS ∩ BADGE_USAGERS = ∅"/>
+    <org.eventb.core.axiom name="B" org.eventb.core.label="axm23" org.eventb.core.predicate="TICKET_USAGERS ∩ FRAUDULEUX_USAGERS = ∅"/>
+    <org.eventb.core.constant name="E" org.eventb.core.identifier="ALLUSAGERS"/>
+    <org.eventb.core.axiom name="F" org.eventb.core.label="axm25" org.eventb.core.predicate="ALLUSAGERS =  TICKET_USAGERS ∪ USAGERS"/>
+    <org.eventb.core.axiom name="G" org.eventb.core.label="axm26" org.eventb.core.predicate="TICKET_USAGERS ⊆  ALLUSAGERS"/>
+    <org.eventb.core.axiom name="H" org.eventb.core.label="axm27" org.eventb.core.predicate="TICKET_USAGERS ∩ BADGE_USAGERS ∩ FRAUDULEUX_USAGERS = ∅"/>
 </org.eventb.core.contextFile>

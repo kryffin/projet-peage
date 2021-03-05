@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="début_entrée/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="85" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="fermeture_entré/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="85" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="début_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="fermeture_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="86" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_entrée/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_entrée/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_tele/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="entrer_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_entré/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_sortie/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="début_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_bad/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_frauduleux/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sortir_tronçon_barriere/act11/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_sortie/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fermeture_sortie/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="163" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
