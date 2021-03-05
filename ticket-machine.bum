@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
     <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="ticket_usagers ≔ ∅" org.eventb.core.comment="Au départ aucun usager qui utilise un ticket n'est sur le tronçon." org.eventb.core.label="act21"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="bouton_presse ≔ FALSE" org.eventb.core.label="act22"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="ticket_pris ≔ FALSE" org.eventb.core.label="act23"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="ticket_inséré ≔ FALSE" org.eventb.core.label="act24"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="payé ≔ FALSE" org.eventb.core.label="act25"/>
     </org.eventb.core.event>
-    <org.eventb.core.seesContext name="(" org.eventb.core.target="type_usager-context"/>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="peage-context"/>
     <org.eventb.core.refinesMachine name=")" org.eventb.core.target="peage-machine-barriere"/>
-    <org.eventb.core.variable name="*" org.eventb.core.comment="Tous les usagers utilisant un ticket" org.eventb.core.identifier="ticket_usagers"/>
-    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="ticket_usagers ⊆ TICKET_USAGERS"/>
+    <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="début_entrée">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="début_entrée"/>
+    </org.eventb.core.event>
     <org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="appuye_bouton">
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∉ usagers"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="bouton_presse ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="ticket_pris ≔ FALSE" org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="-" org.eventb.core.identifier="usager"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ péage1 "/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∉ péage2 "/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="bouton_presse = FALSE"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="-" org.eventb.core.comment="Tous les usagers du tronçon" org.eventb.core.identifier="usagers"/>
     <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="usagers ⊆ USAGERS"/>
@@ -26,29 +29,19 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="ticket_pris ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="bouton_presse = TRUE"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="ticket_pris = FALSE"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="usager ∈ péage1 "/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="usager ∉ péage2 "/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="1" org.eventb.core.identifier="ticket_pris"/>
     <org.eventb.core.invariant name="2" org.eventb.core.label="inv3" org.eventb.core.predicate="bouton_presse ∈ BOOL"/>
     <org.eventb.core.invariant name="3" org.eventb.core.label="inv4" org.eventb.core.predicate="ticket_pris ∈ BOOL"/>
-    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_tronçon">
+    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrer_tronçon">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer_tronçon"/>
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="internal1" org.eventb.core.comment="l'usager n'est pas déjà dans le tronçon" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∉ usagers"/>
-        <org.eventb.core.guard name="(" org.eventb.core.comment="Si la barrière est fermée" org.eventb.core.label="grd11" org.eventb.core.predicate="bar1 = FALSE"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="bar1 ≔ TRUE" org.eventb.core.comment="Alors la barrière s'ouvre" org.eventb.core.label="act11"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd13" org.eventb.core.predicate="usager ∉ péage1"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd14" org.eventb.core.predicate="usager ∉ péage2"/>
-        <org.eventb.core.guard name="internal2" org.eventb.core.label="grd15" org.eventb.core.predicate="usager ∉ usagers"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd21" org.eventb.core.predicate="usager ∉ usagers"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd22" org.eventb.core.predicate="bouton_presse = TRUE"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd23" org.eventb.core.predicate="ticket_pris = TRUE"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="bouton_presse ≔ FALSE" org.eventb.core.label="act22"/>
         <org.eventb.core.action name="." org.eventb.core.assignment="ticket_pris ≔ FALSE" org.eventb.core.label="act23"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd24" org.eventb.core.predicate="usager ∉ ticket_usagers"/>
-        <org.eventb.core.action name="internal3" org.eventb.core.assignment="usagers ≔ usagers ∪ {usager}" org.eventb.core.label="act24"/>
-        <org.eventb.core.action name="internal4" org.eventb.core.assignment="péage1 ≔ péage1 ∪ {usager}" org.eventb.core.label="act25"/>
-        <org.eventb.core.action name="internal5" org.eventb.core.assignment="ticket_usagers ≔ ticket_usagers ∪ {usager}" org.eventb.core.label="act26"/>
-        <org.eventb.core.guard name="internal6" org.eventb.core.label="grd25" org.eventb.core.predicate="usager ∈ TICKET_USAGERS"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fermeture_entré">
         <org.eventb.core.guard name="(" org.eventb.core.label="grd21" org.eventb.core.predicate="usager ∈ usagers"/>
@@ -60,9 +53,11 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="insérer_ticket">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ ticket_usagers"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ usagers"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="ticket_inséré ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="payé ≔ FALSE" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="usager ∈ péage2"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ticket_inséré = FALSE"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="9" org.eventb.core.label="inv5" org.eventb.core.predicate="ticket_inséré ∈ BOOL"/>
     <org.eventb.core.variable name=":" org.eventb.core.identifier="ticket_inséré"/>
@@ -70,14 +65,14 @@
     <org.eventb.core.invariant name="=" org.eventb.core.label="inv6" org.eventb.core.predicate="payé ∈ BOOL"/>
     <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="payement">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="usager"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ ticket_usagers"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="usager ∈ usagers"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="payé ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="ticket_inséré = TRUE"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="usager ∈ péage2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_tronçon">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortir_tronçon"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd21" org.eventb.core.predicate="usager ∈ ticket_usagers"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="ticket_usagers ≔ ticket_usagers ∖ {usager}" org.eventb.core.label="act21"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd21" org.eventb.core.predicate="usager ∈ usagers"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="ticket_inséré ≔ FALSE" org.eventb.core.label="act22"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="payé ≔ FALSE" org.eventb.core.label="act23"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd22" org.eventb.core.predicate="payé = TRUE"/>
@@ -92,7 +87,7 @@
     <org.eventb.core.variable name="E" org.eventb.core.identifier="péage2"/>
     <org.eventb.core.invariant name="F" org.eventb.core.label="inv7" org.eventb.core.predicate="bar1 ∈ BOOL"/>
     <org.eventb.core.invariant name="G" org.eventb.core.label="inv8" org.eventb.core.predicate="bar2 ∈ BOOL"/>
-    <org.eventb.core.invariant name="H" org.eventb.core.label="inv9" org.eventb.core.predicate="péage1 ⊆ usagers"/>
-    <org.eventb.core.invariant name="I" org.eventb.core.label="inv10" org.eventb.core.predicate="péage2 ⊆ usagers"/>
+    <org.eventb.core.invariant name="H" org.eventb.core.label="inv9" org.eventb.core.predicate="péage1 ⊆ USAGERS"/>
+    <org.eventb.core.invariant name="I" org.eventb.core.label="inv10" org.eventb.core.predicate="péage2 ⊆ USAGERS"/>
     <org.eventb.core.invariant name="J" org.eventb.core.label="inv11" org.eventb.core.predicate="péage1 ∩ péage2 = ∅"/>
 </org.eventb.core.machineFile>

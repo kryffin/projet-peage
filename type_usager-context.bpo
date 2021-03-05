@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="6">
-<org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-<org.eventb.core.poIdentifier name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/type_usager-context.bpo|org.eventb.core.poFile#type_usager-context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#*"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#-"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="BADGE_USAGERS∩TICKET_USAGERS=(∅ ⦂ ℙ(USAGERS))" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#."/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="BADGE_USAGERS∪TICKET_USAGERS=USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#\/"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="BADGE_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+        <org.eventb.core.poIdentifier name="TICKET_USAGERS" org.eventb.core.type="ℙ(USAGERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/projet-peage/type_usager-context.bpo|org.eventb.core.poFile#type_usager-context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TICKET_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#1"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BADGE_USAGERS⊆USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#2"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="BADGE_USAGERS∩TICKET_USAGERS=(∅ ⦂ ℙ(USAGERS))" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="BADGE_USAGERS∪TICKET_USAGERS=USAGERS" org.eventb.core.source="/projet-peage/type_usager-context.buc|org.eventb.core.contextFile#type_usager-context|org.eventb.core.axiom#\/"/>
+    </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
